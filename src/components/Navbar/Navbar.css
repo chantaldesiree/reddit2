@@ -1,0 +1,14 @@
+ul {
+    list-style: none;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    float: right;
+}
+
+.logo {
+    flex-basis: 85%;
+}
