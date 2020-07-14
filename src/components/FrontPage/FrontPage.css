@@ -1,19 +1,19 @@
-
 ul {
-    list-style: none;
-    padding: 0 16px;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 ul li {
-    float: right;
+  float: right;
 }
 
 .logo {
-    flex-basis: 85%;
+  flex-basis: 85%;
 }
 
 .postContainer {
-    display: flex;
+  display: flex;
+  flex-direction: column;
 }

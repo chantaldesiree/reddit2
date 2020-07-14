@@ -1,0 +1,15 @@
+.navStyle a {
+  color: #e4fde1;
+  font-style: none;
+  text-decoration: none;
+}
+
+.post a {
+  color: #f45b69;
+  font-style: none;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}

@@ -1,25 +1,40 @@
 body {
-    background-color: #bebebe;
-    color: #114B5F;
+  background-color: #e6e6e6;
+  color: #114b5f;
 }
+
+/* .postContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 650px);
+  grid-gap: 0 6px;
+} */
 
 .post {
-    background-color: #e0e0e0;
-    padding: 16px 32px;
-    margin: 32px;
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-gap: 0 6px;
+  background-color: #f1f1f1;
+  padding: 16px 32px;
+  margin: 32px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 0 6px;
+  box-shadow: 1px 1px 5px #114b5f;
 }
 
-
-.timestamp, .socialMedia {
-    width: 12%;
-    min-width: 185px;
-    text-align: right;
+.timestamp,
+.socialMedia {
+  width: 12%;
+  min-width: 175px;
+  text-align: right;
 }
 
-.postTitle, .postText {
-    float: left;
+.postTitle,
+.postText {
+  float: left;
 }
 
+.post i {
+  color: #f45b69;
+}
+
+.highlightColor {
+  color: #f45b69;
+}

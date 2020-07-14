@@ -1,31 +1,31 @@
 ul {
-    list-style: none;
-    padding: 10px 0px;
-    margin: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  list-style: none;
+  padding: 10px 0px;
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 ul li {
-    float: right;
+  float: right;
 }
 
 i {
-    padding-right: 3px;
+  padding-right: 3px;
 }
 
 .logo {
-    flex-basis: 70%;
-    padding-left: 16px;
+  flex-basis: 70%;
+  padding-left: 16px;
 }
 
 .userInterface {
-    flex-shrink: 0;
-    margin: 0 16px;
+  flex-shrink: 0;
+  margin: 0 16px;
 }
 
 .navStyle {
-    background-color: #114B5F;
-    color: #E4FDE1;
+  background-color: #114b5f;
+  color: #e4fde1;
 }
