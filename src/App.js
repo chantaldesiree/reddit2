@@ -6,9 +6,9 @@ import FrontPage from './components/FrontPage/FrontPage'
 function App() {
   return (
     <>
-      <Navbar style={{backgroundColor: "black", color: "white"}}/>
+      <Navbar/>
 
-      <FrontPage style={{backgroundColor: "white", color: "black"}}/>
+      <FrontPage/>
 
     </>
   );
