@@ -45,7 +45,7 @@ function Post() {
 
             <div>
               <a href="#">
-                <i className="fas fa-check-circle" title="Save"></i>
+                <i className="fa fa-floppy-o" title="Save"></i>
               </a>
             </div>
 
