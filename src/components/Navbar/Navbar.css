@@ -29,3 +29,9 @@ i {
   background-color: #114b5f;
   color: #e4fde1;
 }
+
+.navStyle a {
+  color: #e4fde1;
+  font-style: none;
+  text-decoration: none;
+}

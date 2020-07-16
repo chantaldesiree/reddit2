@@ -13,28 +13,35 @@ body {
   background-color: #f1f1f1;
   padding: 16px 32px;
   margin: 32px;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-gap: 0 6px;
+  display: flex;
+  flex-direction: column;
   box-shadow: 1px 1px 5px #114b5f;
 }
 
-.timestamp,
-.socialMedia {
-  width: 12%;
-  min-width: 175px;
-  text-align: right;
+.post a {
+  color: #129c8a;
+  font-style: none;
+  text-decoration: none;
 }
 
-.postTitle,
-.postText {
-  float: left;
+a:hover {
+  font-weight: bold;
 }
 
 .post i {
-  color: #f45b69;
+  color: #129c8a;
 }
 
 .highlightColor {
-  color: #f45b69;
+  color: #129c8a;
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.socialMedia {
+  display: flex;
+  float: left;
+  justify-content: space-between;
 }
