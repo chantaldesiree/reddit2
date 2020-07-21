@@ -1,113 +1,73 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Post.css";
-import Content from "./PostLorumIpsum";
+import PostContent from "./PostContent";
 
-function Post() {
-  var PostInfo = Content.posts;
+class Post extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { postInfo: this.props.postInfo, isVisiblePost: true };
+  }
 
-  return (
-    <>
-      {PostInfo.map((post) => (
-        <div className="post" key={post.postID}>
-          <div className="postTitle">
-            <strong className="highlightColor title">{post.postTitle}</strong>
-            <p style={{ "margin-top": "0px" }}>
-              by <u>{post.author}</u> - <strong>[{post.timestamp}]</strong>
-            </p>
+  updatePostVisibility() {
+    this.setState({ isVisiblePost: !this.state.isVisiblePost });
+  }
+
+  render() {
+    var post = this.state.postInfo;
+
+    return (
+      <>
+        {this.state.isVisiblePost ? (
+          <div className="post" key={post.postID}>
+            <div>
+              <PostContent content={post} />
+            </div>
+
+            <div className="socialMedia">
+              <div>
+                <a href="#">
+                  <strong className="highlightColor">
+                    {post.socialMedia.comments}{" "}
+                  </strong>
+                  <i className="fas fa-comment-dots" title="Comment"></i>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <strong className="highlightColor">
+                    {post.socialMedia.likes}{" "}
+                  </strong>
+                  <i className="fas fa-heart" title="Like"></i>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <i className="fas fa-share" title="Share"></i>
+                </a>
+              </div>
+
+              <div>
+                <a href="#">
+                  <i className="fa fa-floppy-o" title="Save"></i>
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href="#"
+                  onClick={() => {
+                    this.updatePostVisibility();
+                  }}
+                >
+                  <i className="fas fa-times-circle" title="Hide"></i>
+                </a>
+              </div>
+            </div>
           </div>
-
-          <div className="postText">
-            <p>{post.postText}</p>
-          </div>
-
-          <div className="socialMedia">
-            <div>
-              <a href="#">
-                <strong className="highlightColor">
-                  {post.socialMedia.comments}{" "}
-                </strong>
-                <i className="fas fa-comment-dots" title="Comment"></i>
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <strong className="highlightColor">
-                  {post.socialMedia.likes}{" "}
-                </strong>
-                <i className="fas fa-heart" title="Like"></i>
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <i className="fas fa-share" title="Share"></i>
-              </a>
-            </div>
-
-            <div>
-              <a href="#">
-                <i className="fa fa-floppy-o" title="Save"></i>
-              </a>
-            </div>
-
-            <div>
-              <a href="#">
-                <i className="fas fa-times-circle" title="Hide"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      ))}
-    </>
-  );
+        ) : null}
+      </>
+    );
+  }
 }
-
-// return (
-//   <>
-//     {PostInfo.map((post) => (
-//       <div className="post" key={post.postID}>
-//         <div className="timestamp">
-//           <strong>[{post.timestamp}]</strong>
-//         </div>
-
-//         <div className="postTitle">
-//           <strong>{post.postTitle}</strong> by <u>{post.author}</u>
-//         </div>
-
-//         <div className="socialMedia">
-//           <p className="highlightColor">
-//             <a href="#">
-//               <strong>{post.socialMedia.comments} </strong>
-//               <i className="fas fa-comment-dots" title="Comment"></i>
-//             </a>
-//           </p>
-//           <p className="highlightColor">
-//             <a href="#">
-//               <strong>{post.socialMedia.likes} </strong>
-//               <i className="fas fa-heart" title="Like"></i>
-//             </a>
-//           </p>
-//           <p>
-//             <a href="#">
-//               <i className="fas fa-share" title="Share"></i>
-//             </a>
-//           </p>
-//           <p>
-//             <a href="#">
-//               <i className="fas fa-check-circle" title="Save"></i>
-//             </a>
-//           </p>
-//           <p>
-//             <a href="#">
-//               <i className="fas fa-times-circle" title="Hide"></i>
-//             </a>
-//           </p>
-//         </div>
-//         <div className="postText">
-//           <p>{post.postText}</p>
-//         </div>
-//       </div>
-//     ))}
-//   </>
-// );
 
 export default Post;

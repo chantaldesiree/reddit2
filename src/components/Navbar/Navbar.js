@@ -6,7 +6,9 @@ function Navbar() {
     <div className="navStyle">
       <ul>
         <li className="logo">
-          <strong>boondoggle</strong>
+          <a href="/">
+            <strong>boondoggle</strong>
+          </a>
         </li>
         <li className="userInterface">
           <a href="#">
@@ -15,14 +17,14 @@ function Navbar() {
           </a>
         </li>
         <li className="userInterface">
-          <a href="#">
+          <a href="/messages">
             <i className="fa fa-envelope fa-fw" aria-hidden="true"></i>
             Messages
           </a>
         </li>
 
         <li className="userInterface">
-          <a href="#">
+          <a href="/user">
             <i className="fa fa-user fa-fw" aria-hidden="true"></i>
             chantaldesiree
           </a>
